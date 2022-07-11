@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameUIController : MonoBehaviour
 {
@@ -36,13 +37,6 @@ public class GameUIController : MonoBehaviour
         timeText = GameObject.Find("TimerText").GetComponent<TextMeshPro>();
     }
 
-    private void showResult(GameObject gameObject, String Message)
-    {
-        gameObject.SetActive(true);
-        TextMeshPro text = gameObject.GetComponent<TextMeshPro>();
-        text.text = Message;
-    }
-
     private void UpdateUIData()
     {
         lifeText.text = gameController.life.ToString();
@@ -54,15 +48,19 @@ public class GameUIController : MonoBehaviour
     {
         if (gameController.GetTotalEnemies() <= gameController.score)
         {
-            showResult(victoryContainer, "Sucesso!");
+            victoryContainer.SetActive(true);
         }
         else if (gameController.life <= 0)
         {
-            showResult(defeatContainer, "Você falhou.");
+            defeatContainer.SetActive(true);
+            if (OVRInput.Get(OVRInput.Button.Any)) 
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
     }
 
-    private void selectUpgrade()
+    private void SelectUpgrade()
     {
         if (OVRInput.Get(OVRInput.Button.Left))
         {
@@ -91,7 +89,7 @@ public class GameUIController : MonoBehaviour
         {
             lefttUpgradeOption.SetActive(true);
             rightUpgradeOption.SetActive(true);
-            selectUpgrade();
+            SelectUpgrade();
         } 
         else
         {

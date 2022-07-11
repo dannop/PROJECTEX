@@ -6,8 +6,8 @@ public class SpherePowerController : MonoBehaviour
 {
     Transform target;
 
-    [SerializeField] float orbitDistance = 10.0f;
-    [SerializeField] float orbitDegreesPerSec = 180.0f;
+    public float orbitDistance = 10.0f;
+    public float orbitDegreesPerSec = 180.0f;
 
     private void Awake()
     {

@@ -27,7 +27,7 @@ public class AlienController : MonoBehaviour
         SetDestination();
     }
 
-    void Update()
+    private void Update()
     {
         SetDestination();
     }
@@ -38,6 +38,7 @@ public class AlienController : MonoBehaviour
         {
             Destroy(transform.gameObject);
             gameController.score += 1;
+            gameController.setCurrentLevelEnemies(gameController.GetCurrentLevelEnemies()+1);
         }
         else if (other.gameObject.CompareTag("Player"))
         {

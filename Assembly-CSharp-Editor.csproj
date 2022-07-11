@@ -798,13 +798,13 @@
       <Project>{D52E82D0-C3E4-8ADB-0C1E-41A014BA22DF}</Project>
       <Name>Oculus.AudioManager.Utils.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Oculus.Platform.Editor.csproj">
-      <Project>{CC2B1CBC-FD87-1051-7CDC-D3AB61856A12}</Project>
-      <Name>Oculus.Platform.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
       <Project>{97703514-0372-A7FA-C14D-D9C44CF0293D}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Oculus.Platform.Editor.csproj">
+      <Project>{CC2B1CBC-FD87-1051-7CDC-D3AB61856A12}</Project>
+      <Name>Oculus.Platform.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
       <Project>{CE1302EF-DC75-CEB0-33C7-060465A1D249}</Project>
@@ -833,6 +833,10 @@
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
       <Project>{C7EBA9EF-8981-C180-05CB-9C7E14E93702}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.MockHMD.csproj">
+      <Project>{4145EED2-505F-25CD-26D7-A6AA777BEAAD}</Project>
+      <Name>Unity.XR.MockHMD</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.csproj">
       <Project>{F26528EB-D917-7AE7-44F7-7193984E5730}</Project>
@@ -910,6 +914,10 @@
       <Project>{A71998B5-9A71-E27E-850A-2254AD65877E}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.MockHMD.Editor.csproj">
+      <Project>{1E689982-0788-F939-5FC9-2B54A9EFA810}</Project>
+      <Name>Unity.XR.MockHMD.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.csproj">
       <Project>{9D4CFC18-8E7D-9933-5C78-2037188FA9F7}</Project>
       <Name>Unity.Services.Core</Name>
@@ -981,14 +989,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{CA1C2B6C-F34F-86C1-200F-4C64919FCB32}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.XR.MockHMD.csproj">
-      <Project>{4145EED2-505F-25CD-26D7-A6AA777BEAAD}</Project>
-      <Name>Unity.XR.MockHMD</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.XR.MockHMD.Editor.csproj">
-      <Project>{1E689982-0788-F939-5FC9-2B54A9EFA810}</Project>
-      <Name>Unity.XR.MockHMD.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
